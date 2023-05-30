@@ -97,4 +97,20 @@ pipeline {
         }
     }
 }
+    post {
+    always {
+      // Your post-build actions here
+
+      // Send notification to Slack
+      slackSend(channel: '#jenkins_test', message: 'Build Triggered!')
+    }
+        success {
+                  slackSend(channel: '#jenkins_test', message: 'Build Executed Successfully!')
+
+        }
+          failure {
+                  slackSend(channel: '#jenkins_test', message: 'Build Execution Failed!')
+
+        }
+  }
 }
