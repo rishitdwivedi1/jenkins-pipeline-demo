@@ -21,6 +21,13 @@ pipeline {
                   
                    }
         }
+                    stage('Third_Job') {
+            steps {
+         
+          sh 'echo "4*a(1)" | bc -l' 
+                  
+                   }
+        }
       
         stage('Fourth_Job') {
             steps {
