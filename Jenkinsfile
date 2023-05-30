@@ -85,6 +85,13 @@ pipeline {
                   
                    }
         }
+                   stage('Twelveth_Job') {
+            steps {
+         
+          sh 'echo "4*a(1)" | bc -l' 
+                  
+                   }
+        }
         
         
         }
