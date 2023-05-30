@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage("First_Stage__")
+        stage("First_Stage__Jobs_in_Parallel")
         {
         parallel{
             
